@@ -37,10 +37,11 @@ export default function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await fetch('https://formspree.io/f/REPLACE_ME', {
+      const api = import.meta.env.VITE_CONTACT_API || 'http://localhost:3007/api/contact'
+      await fetch(api, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, source: 'Peak Flow Plumbing' }),
       })
     } catch {}
     setSent(true)

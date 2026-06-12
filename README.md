@@ -1,16 +1,40 @@
-# React + Vite
+# Peak Flow Plumbing - Demo Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Full local business website built as a client portfolio piece. Responsive, fast, contact form wired to live email delivery.
 
-Currently, two official plugins are available:
+**Live:** [demo-site-plumber-ten.vercel.app](https://demo-site-plumber-ten.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![React](https://img.shields.io/badge/React-19-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-4-teal) ![Vite](https://img.shields.io/badge/Vite-8-purple)
 
-## React Compiler
+## Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Sticky nav (mobile hamburger menu)
+- Hero with CTA + trust indicators
+- 6 service cards
+- Stats + about / credentials checklist
+- 3 testimonials
+- Contact form (routes to owner Gmail via `/api/contact`)
+- Footer
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React 19 + Tailwind CSS v4 + Vite 8. Zero dependencies beyond that. Deploys to Vercel in ~30 seconds.
+
+## Customize for a client
+
+1. Find/replace business name, phone, email, location
+2. Update `SERVICES` array in `src/App.jsx`
+3. Update `TESTIMONIALS` array
+4. Set `VITE_CONTACT_API` in `.env` to your contact API URL
+5. `vercel --prod`
+
+## Local dev
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+Built by [Noah Page](https://noahpageit.github.io) - [Book a call](https://demo-site-consulting.vercel.app/#contact)

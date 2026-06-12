@@ -1,0 +1,3 @@
+/* Tailwind handles all styles - reset any Vite default interference */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; }
